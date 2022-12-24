@@ -31,3 +31,9 @@ steps:
       PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       ArtifactName: 'drop'
       publishLocation: 'Container'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
